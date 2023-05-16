@@ -35,6 +35,7 @@ maxmo = ""
 minmo = ""
 changesum = []
 changeave = 0.00
+total_sum = 0
 
 with open(csvpath) as  csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
@@ -76,21 +77,61 @@ min_pl = 0
 for i in range (0, len(pl_changelist)):
     if pl_changelist[i] > max_pl:
             max_pl = pl_changelist[i]
-            #maxmo = date.index[i]
+            maxmo = str(date[(i+1)])
 
     elif pl_changelist[i] < min_pl:
             min_pl = pl_changelist[i]
-            #minmo = date.index(y)
+            minmo = str(date[(i+1)])
 
-# the average over those changes
-#changeave = float(changesum/total_months)
+#the average over those changes
+#changeave = int(pl_changelist/total_months)
+for i in range (0,len(pl_changelist)):
+    total_sum = pl_changelist[i] + total_sum
 
-print (total_months)
-print (total_pl)
-print (changeave)
-print (max_pl)
-#print (maxmo)
-print (min_pl)
-#print (minmo)
-print (pl_changelist)
-print (date)
+changeave = total_sum/(total_months-1)
+changeave_rd = round(changeave,2)
+
+#Output
+    #Financial Analysis
+    #----------------------------
+    #Total Months: 86
+    #Total: $22564198
+    #Average Change: $-8311.11
+    #Greatest Increase in Profits: Aug-16 ($1862002)
+    #Greatest Decrease in Profits: Feb-14 ($-1825558)
+
+#print output
+print ()
+print ("Financial Analysis")
+print ()
+print ("----------------------------")
+print ()
+print (f"Total Months: {total_months}")
+print ()
+print (f"Total: ${total_pl}")
+print ()
+print (f"Average Change: ${changeave_rd}")
+print ()
+print (f"Greatest Increase in Profits: {maxmo} (${max_pl})")
+print ()
+print (f"Greatest Decrease in Profits: {minmo} (${min_pl})")
+
+#Print to .txt file
+with open("PyBank_AvdZ.txt", "a") as f:
+    print ("", file=f)
+    print ("Financial Analysis", file=f)
+    print ("", file=f)
+    print ("----------------------------", file=f)
+    print ("", file=f)
+    print (f"Total Months: {total_months}", file=f)
+    print ("", file=f)
+    print (f"Total: ${total_pl}", file=f)
+    print ("", file=f)
+    print (f"Average Change: ${changeave_rd}", file=f)
+    print ("", file=f)
+    print (f"Greatest Increase in Profits: {maxmo} (${max_pl})", file=f)
+    print ("", file=f)
+    print (f"Greatest Decrease in Profits: {minmo} (${min_pl})", file=f)
+
+
+
