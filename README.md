@@ -18,3 +18,7 @@ https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
 Getting max value info from Pan and discussion in studygroup (also included Raina, Eva, Hannah) and fixed with 
 https://sparkbyexamples.com/python/get-index-of-max-of-list-in-python/#:~:text=Python%20Get%20Index%20of%20max,element%20and%20use%20the%20list.
 
+5/15 Notes for PyBank
+Finished PyBank.  Rounding help from: https://www.programiz.com/python-programming/methods/built-in/round
+Got help from TA Andrew K. in figuring out how to call out the month by using the index position.
+Printing to .txt file https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
