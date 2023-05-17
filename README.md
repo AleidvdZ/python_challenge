@@ -1,7 +1,7 @@
 # python_challenge
 051223 Setting up this repository to complete this challenge; created folders PyBank and PyPoll
   
-0513 Was successful in pushing from Bash to GitHub.  GitHub does not like empty folders so was not able to add the "analysis" folders to the PyBank and PyPoll folders but will when it contains the applicable txt file. Worked around this by adding a .gitkeep file to each analysis folder, followed by git add, git commit, git pull, git pull.
+05/13 Was successful in pushing from Bash to GitHub.  GitHub does not like empty folders so was not able to add the "analysis" folders to the PyBank and PyPoll folders but will when it contains the applicable txt file. Worked around this by adding a .gitkeep file to each analysis folder, followed by git add, git commit, git pull, git pull.
 Reference: https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/gitkeep-push-empty-folders-git-commit#:~:text=Git%20doesn't%20like%20empty,gitkeep%20file%20comes%20in.
 
 5/13 Worked on penciling logic for PyPoll and figuring out how to count.  I also encountered an “I/O operation on closed file error” and read through several resources but none of them specifically helped me other than this one (https://stackoverflow.com/questions/18952716/valueerror-i-o-operation-on-closed-file) which made me think about tabbing in correctly.  Correctly aligning commands eliminated that error.
@@ -22,3 +22,7 @@ https://sparkbyexamples.com/python/get-index-of-max-of-list-in-python/#:~:text=P
 Finished PyBank.  Rounding help from: https://www.programiz.com/python-programming/methods/built-in/round
 Got help from TA Andrew K. in figuring out how to call out the month by using the index position.
 Printing to .txt file https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
+
+5/16 PyPoll
+OK after a lot of work looping through the candidate list I found this resource to id the unique candidates in the election data: https://www.digitalocean.com/community/tutorials/get-unique-values-from-a-list-in-python
+Working through counting votes per candidate
