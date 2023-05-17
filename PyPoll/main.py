@@ -30,45 +30,54 @@ import csv
 
 csvpath = os.path.join("Resources", "election_data.csv")
 
-#set variables
+#set empty list to dump csv columns into
+ballot_id = []
+county = []
+candcolumn = []
+
+#recipient lists
 candidate_list = []
 total_vote_list = []
+
+#variables
 start_vote = 1
 cand_vote = 0
-start_candidate = ""
 
-# Create a list to store data to sort
-candcolumn = []
-#dump all of the candidate names in here and then pick out the unique ones?
 
-with open(csvpath) as  csvfile:
+with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
 
     # Read the header row first (skip this part if there is no header)
     csv_header = next(csv_reader)
 
     # count the number of lines in the csv after the header (already accounted for)
-    no_votes = len(list(csv_reader))
+    #no_votes = len(list(csv_reader))
  
-    # Create empty list
-    indiv_cand = []
-
-    #dump all of the candidate names in here and then pick out the unique ones?
-
+    #dump all of the csv columns into list
     for row in csv_reader:
-        # Create a list to store data to sort
-        candcolumn = []
-        # Add candidates
+
+        ballot_id.append(row[0])
+        county.append(row[1])
         candcolumn.append(row[2])
 
-    # Create empty list
-    indiv_cand = [] 
-    for item in candcolumn:
-        if item not in indiv_cand:
-            indiv_cand.append(item)
+#put unique candidate names in list
+candidate_list = set(candcolumn)
 
-    for item in indiv_cand:
-        print (item)      
+#calculate number of votes based on ballot number
+no_votes = len(ballot_id)
+
+#count numbere of votes for each candidate
+#set empty candidate variable
+candidate = ""
+
+for name in range(0, len(candcolumn)):
+    for cand in range(0, len(candidate_list)):
+        if str(name) == str(candidate[cand]):
+            cand_vote=cand_vote + 1
+            total_vote_list.append(cand_vote)   
+#need to think this through
+
+        
 
         # Read through each row of data after the header
     #for row in csv_reader:
@@ -94,6 +103,6 @@ with open(csvpath) as  csvfile:
     #start_candidate = str(candidate[2])
 
 
-print(no_votes)
-print(candidate_list)
-print(total_vote_list)
+print (no_votes)
+print (candidate_list)
+print (total_vote_list)
