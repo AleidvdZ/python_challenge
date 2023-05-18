@@ -38,10 +38,9 @@ candcolumn = []
 #recipient lists
 candidate_list = []
 total_vote_list = []
+combo_list = []
 
 #variables
-start_vote = 1
-cand_vote = 0
 
 
 with open(csvpath) as csvfile:
@@ -50,12 +49,8 @@ with open(csvpath) as csvfile:
     # Read the header row first (skip this part if there is no header)
     csv_header = next(csv_reader)
 
-    # count the number of lines in the csv after the header (already accounted for)
-    #no_votes = len(list(csv_reader))
- 
     #dump all of the csv columns into list
     for row in csv_reader:
-
         ballot_id.append(row[0])
         county.append(row[1])
         candcolumn.append(row[2])
@@ -66,43 +61,43 @@ candidate_list = set(candcolumn)
 #calculate number of votes based on ballot number
 no_votes = len(ballot_id)
 
-#count numbere of votes for each candidate
-#set empty candidate variable
 candidate = ""
+name = ""
+cand_vote = 0
 
-for name in range(0, len(candcolumn)):
-    for cand in range(0, len(candidate_list)):
-        if str(name) == str(candidate[cand]):
-            cand_vote=cand_vote + 1
-            total_vote_list.append(cand_vote)   
-#need to think this through
+for candidate in candidate_list:
+    for name in candcolumn:
+        if name == candidate:
+            cand_vote = cand_vote + 1
+     
+    
+    total_vote_list.append(cand_vote)  
+    combo_list.extend([candidate, cand_vote])
+    cand_vote = 0
 
-        
+# Need to calculate %
+#for item in combo_list:
+#    print(item)
+  
+def convert(combo_list);
+    
+    
 
-        # Read through each row of data after the header
-    #for row in csv_reader:
-    #    if row[2]==(start_candidate):
-    #       cand_vote = start_vote + 1 
-    #       candidate_list.append(str(row[2]))
-         
-    #    else:
-    #       total_vote_list.append(cand_vote)
-    #       start_candidate = "" 
-
-
-         
-
-
-
-
-#what I had morning of 5/14
-    #    if str(row_number) != str(row_number-1):
-    #        canditate= 
-    #        candidate_list.append(str((row_number-1)[2]))
-                    
-    #start_candidate = str(candidate[2])
+# Need to print the candidates in order alphabetical by first name followed by % and number in parenthesis
 
 
 print (no_votes)
 print (candidate_list)
 print (total_vote_list)
+print (combo_list)
+
+#print output
+print ()
+print ("Election Results")
+print ()
+print ("----------------------------")
+print ()
+print (f"Total Votes: {no_votes}")
+print ()
+print ("----------------------------")
+print ()
