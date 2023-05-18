@@ -18,6 +18,11 @@ https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
 Getting max value info from Pan and discussion in studygroup (also included Raina, Eva, Hannah) and fixed with 
 https://sparkbyexamples.com/python/get-index-of-max-of-list-in-python/#:~:text=Python%20Get%20Index%20of%20max,element%20and%20use%20the%20list.
 
+5/17 PyPoll
+Finally got my vote count per candidate. It was trial and error with how I was comparing variables in my lists and it turned out to be simple.  I had over complicated it and mixed values and strings and kept getting errors.
+To make sure that I had the right vote total with a candidate I found the “extend” command to add two items to a list. https://sparkbyexamples.com/python/python-append-multiple-items-to-list/#:~:text=To%20append%20or%20add%20multiple,the%20end%20of%20the%20list.
+
+
 5/15 Notes for PyBank
 Finished PyBank.  Rounding help from: https://www.programiz.com/python-programming/methods/built-in/round
 Got help from TA Andrew K. in figuring out how to call out the month by using the index position.
