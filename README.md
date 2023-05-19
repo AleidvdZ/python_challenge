@@ -18,11 +18,6 @@ https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
 Getting max value info from Pan and discussion in studygroup (also included Raina, Eva, Hannah) and fixed with 
 https://sparkbyexamples.com/python/get-index-of-max-of-list-in-python/#:~:text=Python%20Get%20Index%20of%20max,element%20and%20use%20the%20list.
 
-5/17 PyPoll
-Finally got my vote count per candidate. It was trial and error with how I was comparing variables in my lists and it turned out to be simple.  I had over complicated it and mixed values and strings and kept getting errors.
-To make sure that I had the right vote total with a candidate I found the “extend” command to add two items to a list. https://sparkbyexamples.com/python/python-append-multiple-items-to-list/#:~:text=To%20append%20or%20add%20multiple,the%20end%20of%20the%20list.
-
-
 5/15 Notes for PyBank
 Finished PyBank.  Rounding help from: https://www.programiz.com/python-programming/methods/built-in/round
 Got help from TA Andrew K. in figuring out how to call out the month by using the index position.
@@ -31,3 +26,18 @@ Printing to .txt file https://stackoverflow.com/questions/36571560/directing-pri
 5/16 PyPoll
 OK after a lot of work looping through the candidate list I found this resource to id the unique candidates in the election data: https://www.digitalocean.com/community/tutorials/get-unique-values-from-a-list-in-python
 Working through counting votes per candidate
+
+5/17 PyPoll
+Finally got my vote count per candidate. It was trial and error with how I was comparing variables in my lists and it turned out to be simple.  I had over complicated it and mixed values and strings and kept getting errors.
+To make sure that I had the right vote total with a candidate I found the “extend” command to add two items to a list. https://sparkbyexamples.com/python/python-append-multiple-items-to-list/#:~:text=To%20append%20or%20add%20multiple,the%20end%20of%20the%20list.
+
+5/18 PyPoll
+Loop that access current and next value in list: https://stackoverflow.com/questions/1011938/loop-that-also-accesses-previous-and-next-values
+Needed to check every other index and this worked perfectly
+https://www.toppr.com/guides/python-guide/examples/python-examples/python-program-to-check-if-a-number-is-odd-or-even/#:~:text=The%20required%20code%20is%20provided%20below.&text=num%20%3D%20int%20(input%20(%E2%80%9C,even%3A%20887%20887%20is%20odd.
+
+Figured out the way I had my print statements embedded in my loop I could not recall what I need for the txt file so needed to work on dictionary: https://stackoverflow.com/questions/25023233/how-to-save-python-screen-output-to-a-text-file
+
+Biggest issue with having print statements embedded within my script, I could not figure out how to the text file.  I found this solution https://stackoverflow.com/questions/25023233/how-to-save-python-screen-output-to-a-text-file but it prints the candidates twice and with the time left I could not figure out why it is doing this.
+
+I know there is probably an easier solution but I’m pretty proud of myself!!
